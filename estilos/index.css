@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+section{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+}
+input{
+    display: block;
+    width: 80%;
+    padding: 10px;
+    border: 5px solid #1f2d4046;;
+    font-weight: 600;
+    margin: 10px auto;
+    text-transform: uppercase;
+}
+ul{
+    border-style: solid;
+    border-color: #1F2D40;
+    border-radius: 5px;
+    margin-bottom: 100px;
+}
+li:nth-child(odd){
+    background-color: #1f2d4046;
+}
+#listaArticulos{
+    font-size: 20px;
+    margin-top: 20px;
+    list-style: none;
+    font-weight: 600;
+    text-align: justify;
+}
+li{
+    border-radius: 2px;
+    margin: 0 0 5px 0;
+    background-color: #ffffff;
+    padding:0 10px;
+}
+li.encabezado{
+    background-color: #1F2D40;
+    color: #F9F16F;
+    margin-bottom: 10px;
+}
+#listaArticulos li:hover:not(:first-of-type){
+    background-color: #1F2D40;
+    color: #F9F16F;
+    font-weight: bold;
+}
+#listaArticulos li.articulo:hover a {
+    color: #F9F16F;
+    font-weight: bold;
+}
+li:hover:not(:first-of-type){
+    color: #ffffff;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.arrow{
+    z-index: 100;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 100px;
+    height: auto;
+    transition: width 0.3s ease, color 0.3s ease;
+}
+.arrow:hover{
+    width: 110px;
+    height: auto;
+}
+.filtro{
+    display: none;
+}
+.loader{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 200;
+}
+.loader img{
+    display: flex;
+    margin: 20rem auto;
+}
+#listaArticulos > li.articulo.frecuente{
+    background-color: rgb(255, 217, 0.5);
+}
+#listaArticulos li.articulo.frecuente:hover, #listaArticulos li.articulo.frecuente:hover a{
+    color:#1046b5;
+}
